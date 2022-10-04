@@ -9,48 +9,65 @@
 require "open-uri"
 
 puts "cleaning up database"
+
 Booking.destroy_all
+
 puts "Bookings destroyed"
+
 Car.destroy_all
+
 puts "Cars destroyed"
+
 User.destroy_all
+
 puts "Users destroyed"
 
 puts "Database cleaned"
-pw = 123456
 
 # Demo users
 User.create!(
   email: "mail@me.com",
-  password: pw
+  password: 123456
 )
+
 User.create!(
   email: "mail2@me.com",
-  password: pw
+  password: 123456
 )
+
 User.create!(
   email: "mail3@me.com",
-  password: pw
+  password: 123456
 )
 
 User.create!(
   email: "mail4@me.com",
-  password: pw
+  password: 123456
 )
 
 User.create!(
   email: "mail5@me.com",
-  password: pw
+  password: 123456
 )
 
 User.create!(
   email: "mail6@me.com",
-  password: pw
+  password: 123456
 )
 
 User.create!(
   email: "mail7@me.com",
-  password: pw
+  password: 123456
+)
+
+User.create!(
+  email: "mail8@me.com",
+  password: 123456
+)
+
+User.create!(
+  email: "mail9@me.com",
+  password: 123456
 )
 
 puts "created #{User.count} users"
@@ -65,7 +82,7 @@ model: "Luxury Vehicle",
 address: "Curepipe",
 year_of_production: 2020,
 price_per_day: 2000
-);
+)
 
 car2 = Car.create!(
 user_id: rand(user_id_first..user_id_last),
@@ -141,7 +158,6 @@ car8 = Car.create!(
 
 puts "Created #{Car.count} cars"
 
-
 car_id_first = Car.first.id
 car_id_last = Car.last.id
 
@@ -150,9 +166,9 @@ car_id_last = Car.last.id
     car_id: rand(car_id_first..car_id_last),
     user_id: rand(user_id_first..user_id_last),
     start_date: (Time.now + 5.day).to_datetime,
-    end_date: (Time.now + 7.day).to_datetime,
+    end_date: (Time.now + 5.day).to_datetime,
     is_accepted: true
   )
 end
 
-puts "Created #{Booking.count} bookings !"
+puts "Created #{Booking.count} bookings"
