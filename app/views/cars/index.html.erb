@@ -1,0 +1,33 @@
+<section class="car-index-body">
+  <div class="car-index-headline">
+    <h1 class="car-headline"><em>Cars Available For Rent</em></h1>
+  </div>
+
+  <div class="cards">
+    <% @cars.each do |car| %>
+      <div class="w3-card-4">
+        <header class="w3-container w3-light-grey">
+          <h3><strong>Car</strong>  : <%= car.brand %></h3>
+        </header>
+
+      <div class="w3-container">
+        <p><strong>Model</strong> : <em><%= car.model %></em></p>
+        <hr>
+        <p><strong>Year of Production</strong> : <%= car.year_of_production %></p>
+        <p><strong>Owner's Address</strong> : <%= car.address %></p>
+        <p><strong>Price per Day</strong> : Rs. <em><%= car.price_per_day %></em> </p>
+      </div>
+
+
+      <div class="card-buttons">
+        <%= link_to car_path(car), class: "btn btn__loadMore" do %>
+        <i class="icon-arrow-right"></i>
+        <span>Explore More</span>
+        <% end %>
+      </div>
+
+    </div>
+      <% end %>
+  </div>
+
+</section>

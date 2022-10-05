@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(user: current_user)
+    @bookings = Booking.where(user: current_user)
   end
 
   private
@@ -35,11 +35,10 @@ class BookingsController < ApplicationController
   end
 
   def set_user
-    @user = User.find(params[:user_id])
+    @user = current_user
   end
 
   def set_booking
     @booking = Booking.find(params[:id])
   end
-
 end

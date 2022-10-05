@@ -1,0 +1,72 @@
+.btn-banner {
+  border-radius: 50px;
+  // background-color: #92c1ed;
+  border: 1.5px solid #fff7f7;
+  color: #e8e8eef0;
+  text-align: center;
+  font-size: 14px;
+  padding: 16px;
+  width: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 24px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-banner:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-banner:hover{
+  padding-right: 24px;
+  padding-left:8px;
+  color: #bad4f4;
+  border: 1.5px solid #bad4f4;
+}
+
+.btn-banner:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+
+.btn__loadMore:hover {
+  background-color: #ff4c01 !important;
+  border-color: #ff4c01;
+  color: #fff;
+
+  i {
+    background-color: #fff;
+    color: #ff4c01;
+  }
+}
+
+.btn .icon-arrow-right {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.btn i {
+  transition: all .3s linear;
+}
+
+.icon-arrow-right {
+  font-size: 65%;
+}
+
+.icon-arrow-right:before {
+  content: "🡪";
+}

@@ -1,0 +1,9 @@
+<div class="form-container">
+  <div class="simple-form">
+    <%= simple_form_for [@car, @booking] do |f| %>
+    <%= f.input :start_date, as: :date, placeholder: 25/01/2022 %>
+    <%= f.input :end_date, as: :date, placeholder: 25/02/2022%>
+    <%= f.submit "Submit Booking", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

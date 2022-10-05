@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner banner-home">
+  <div class="vcenter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+          <div class="banner-content">
+            <h1 class="h1-banner">Dodo Car Rental</h1>
+            <%# <p class="p-banner text-center"><span data-controller="typed-js"></span> %>
+            <%# </p> %>
+            <p class="p-banner">Are you looking for cheap car rental deal in Mauritius?</p>
+            <p class="p-banner">Search right here !</p>
+              <%= link_to "Discover all our cars", cars_path, class:"btn-banner" %>
+            <%# <a class="btn btn-flat" href="#">Apply now</a> %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

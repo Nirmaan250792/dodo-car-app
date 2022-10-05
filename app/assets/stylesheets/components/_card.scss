@@ -1,0 +1,12 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  background-color: aliceblue;
+  padding: 30px 30px;
+  opacity: 0.9;
+}
+
+.card-booking{
+  padding: 12px;
+}
