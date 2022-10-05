@@ -165,9 +165,9 @@ car_id_last = Car.last.id
   Booking.create!(
     car_id: rand(car_id_first..car_id_last),
     user_id: rand(user_id_first..user_id_last),
-    start_date: (Time.now + 5.day).to_datetime,
-    end_date: (Time.now + 5.day).to_datetime,
-    is_accepted: true
+    start_date: (Time.now - 10.day).to_datetime,
+    end_date: (Time.now + 20.day).to_datetime,
+    is_accepted: false
   )
 end
 
